@@ -4,6 +4,9 @@ import React,{useState, useEffect, useRef} from "react";
 import "./globals.css";
 import Sidebar from "./sidebar/page";
 import { Sansation } from 'next/font/google'
+import { usePathname } from 'next/navigation';
+
+import Image from "next/image";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -17,6 +20,7 @@ const geistMono = Geist_Mono({
 
 
 export default function RootLayout({ children }) {
+    const pathName = usePathname();
 
   const [mouseposition, setMousePosition] = useState({ x: 0, y: 0 });
     const updateMousePosition = (e) => {
@@ -49,6 +53,14 @@ export default function RootLayout({ children }) {
         <div className={`w-full h-screen flex items-center justify-center`}>
           {children}
         </div>
+        {pathName != '/'?<div className="absolute bottom-10 right-4">
+          <Image
+          src={'/icons/title.png'}
+          alt='Icon'
+          width={120}
+          height={120}
+          />
+        </div>:null}
       </body>
     </html>
   );
