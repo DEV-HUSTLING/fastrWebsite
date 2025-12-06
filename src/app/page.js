@@ -22,14 +22,14 @@ export default function Home({ Component, pageProps }) {
   return (
     <>
       <AOSClient />
-      <div className="flex space-x-4">
+      <div className="flex hover:cursor-none space-x-4">
         {title.split("").map((char, index) => (
           <span 
             key={index} 
             data-aos="zoom-in" 
             data-aos-duration="1000"
             data-aos-delay={index * 500} 
-            className={` ${MIT.className} main-tile text-neutral-100 hover:cursor-none bg-none font-extrabold text-[10rem] transform transition-transform duration-400 hover:text-shadow-lg horder hover:text-shadow-blue-600`}>
+            className={` ${MIT.className} main-tile text-neutral-100  bg-none font-extrabold text-[10rem] transform transition-transform duration-400 hover:text-shadow-lg horder hover:text-shadow-blue-600`}>
             {char === " " ? "\u00A0" : char}
           </span>
         ))

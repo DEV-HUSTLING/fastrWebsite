@@ -3,7 +3,7 @@ import React from 'react'
 
 function page() {
   return (
-    <div className='absolute left-1/5 w-3/4  h-3/4 grid grid-rows-3 gap-4'>
+    <div className='absolute left-1/5 w-3/4  h-3/4 flex-col p-6'>
       <p className='w-full text-xl tracking-wider'>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
@@ -18,7 +18,7 @@ function page() {
           data-aos='zoom-in'
           data-aos-duration="2000"
           data-aos-delay="500"
-          className='opacity-50 transform transition-transform duration-400 hover:drop-shadow-xl horder hover:drop-shadow-white hover:opacity-100'
+          className='career-icon opacity-50 transform transition-transform duration-400 hover:drop-shadow-xl horder hover:drop-shadow-white hover:opacity-100'
           />
         </a>
         <a className='w-fit'><Image 
@@ -29,7 +29,7 @@ function page() {
           data-aos='zoom-in'
           data-aos-duration="2000"
           data-aos-delay="1000"
-          className='opacity-50 transform transition-transform duration-400 hover:drop-shadow-lg horder hover:drop-shadow-white hover:opacity-100'
+          className='career-icon opacity-50 transform transition-transform duration-400 hover:drop-shadow-lg horder hover:drop-shadow-white hover:opacity-100'
           /></a>
         <a className='w-fit'><Image 
           src={'/icons/mail.webp'}
@@ -39,7 +39,7 @@ function page() {
           data-aos='zoom-in'
           data-aos-duration="2000"
           data-aos-delay="2000"
-          className='opacity-50 transform transition-transform duration-400 hover:drop-shadow-lg horder hover:drop-shadow-white hover:opacity-100'
+          className='career-icon opacity-50 transform transition-transform duration-400 hover:drop-shadow-lg horder hover:drop-shadow-white hover:opacity-100'
           /></a>
       </div>
       
