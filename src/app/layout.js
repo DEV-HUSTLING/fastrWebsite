@@ -64,10 +64,11 @@ export default function RootLayout({ children }) {
           <Sidebar />
         </div>
               
-        <div className={`main-content w-full h-screen flex items-center justify-center`}>
+        {/* Main content should not be fixed or negative-z; keep it above the background canvas */}
+        <div className={`main-content fixed w-full min-h-screen flex items-center justify-center z-0`}>
           {children}
         </div>
-        {pathName != '/'?<div className="absolute bottom-10 right-4">
+        {pathName != '/'?<div className="corner-title fixed bottom-10 right-4">
           {/* <Image
           src={'/icons/title.png'}
           alt='Icon'
@@ -79,6 +80,7 @@ export default function RootLayout({ children }) {
             FASTR
           </span>
         </div>:null}
+        
       </body>
     </html>
   );
