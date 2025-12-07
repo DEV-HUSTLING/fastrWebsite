@@ -65,7 +65,7 @@ export default function RootLayout({ children }) {
         </div>
               
         {/* Main content should not be fixed or negative-z; keep it above the background canvas */}
-        <div className={`main-content fixed w-full min-h-screen flex items-center justify-center z-0`}>
+        <div className={`main-content fixed w-full min-h-screen flex items-center justify-center z-[-1]`}>
           {children}
         </div>
         {pathName != '/'?<div className="corner-title fixed bottom-10 right-4">
