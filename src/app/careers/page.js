@@ -1,15 +1,15 @@
 import Image from 'next/image'
 import React from 'react'
-
+import '../globals.css'
 function page() {
   return (
-    <div className='absolute left-1/5 w-3/4  h-3/4 flex-col p-6'>
+    <div className='careers-content absolute left-1/5 w-3/4  h-3/4 flex-col p-6 '>
       <p className='w-full text-xl tracking-wider'>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
       </p>
-      <div className='flex w-full justify-evenly items-center mt-8'>
-        <a>
+      <div className='careers-socials flex w-full justify-evenly items-center mt-8'>
+        <a href='https://www.nono.network/'>
           <Image 
           src={'/icons/instagram.webp'}
           alt='Instagram Icon'

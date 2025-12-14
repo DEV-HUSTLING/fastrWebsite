@@ -22,7 +22,7 @@ export default function Home({ Component, pageProps }) {
   return (
     <>
       <AOSClient />
-      <div className="flex hover:cursor-none space-x-4">
+      <div className="main-title flex hover:cursor-none space-x-4">
         {title.split("").map((char, index) => (
           <span 
             key={index} 

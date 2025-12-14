@@ -1,5 +1,6 @@
 "use client"
 import React, { useRef, useEffect } from 'react'
+import '../globals.css'
 function BackgroundGrid() {
     const canvasRef = useRef(null)
     // start stracking without glitching
@@ -90,7 +91,7 @@ function BackgroundGrid() {
     return (
         <canvas
             ref={canvasRef} // the reference to the DOM canvas
-            className="fixed inset-0 -z-10 w-full h-full"
+            className="fixed inset-0 -z-10 w-full h-full cursor-effect"
         // fixed → covers entire screen  
         // inset-0 → top:0 bottom:0 left:0 right:0  
         // -z-10 → behind all other content  

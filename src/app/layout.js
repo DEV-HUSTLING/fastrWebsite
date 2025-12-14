@@ -60,13 +60,13 @@ export default function RootLayout({ children }) {
           className="cursor"
           style={{ left: `${mouseposition.x}px`, top: `${mouseposition.y}px` }}
         ></div> */}
-        <div className="fixed left-0 top-0 h-full">
-          <Sidebar />
-        </div>
-              
         {/* Main content should not be fixed or negative-z; keep it above the background canvas */}
-        <div className={`main-content fixed w-full min-h-screen flex items-center justify-center z-[-1]`}>
+        <div className={`main-content fixed w-full min-h-screen flex items-center justify-center z-11`}>
           {children}
+        </div>
+        
+        <div className="fixed left-0 top-0 h-full w-fit z-10">
+          <Sidebar />
         </div>
         {pathName != '/'?<div className="corner-title fixed bottom-10 right-4">
           {/* <Image

@@ -9,6 +9,7 @@ function Page() {
   }, []);
   return (
     <div className='main-content-data w-1/2 h-3/4 flex-col p-6'>
+      <div>
       <p data-aos='zoom-in' ata-aos="zoom-in"
         data-aos-duration="1500"
         data-aos-delay="100" className='w-full text-xl tracking-wider'>
@@ -24,6 +25,8 @@ function Page() {
         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       </p>
+      </div>
+
 
     </div>
   )
