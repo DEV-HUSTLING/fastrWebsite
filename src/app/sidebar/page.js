@@ -29,11 +29,11 @@ function Page() {
             </button>
 
 
-            {menu && (
-                <div className="fixed inset-0 bg-black/75 z-[99] medium-screen">
-                    <button onClick={() => setMenu(!menu)} className='menu-icon absolute top-6 left-6 w-fit rounded-lg'>
+            {menu ? (
+                <div className="fixed inset-0 bg-black/75  medium-screen">
+                    <button onClick={() => setMenu(!menu)} className='menu-icon absolute top-6 left-6 w-fit rounded-lg z-[99]'>
                         <Image
-                            src={'/icons/menu.png'}
+                            src={'/icons/close.png'}
                             width={50}
                             height={50}
                             alt='icon'
@@ -64,7 +64,7 @@ function Page() {
                             </Link>
                         </div>
                     </div>
-                </div>)}
+                </div>):null}
             
             
             <main style={{ fontSize: 'larger' }} className={`${sansation.variable}text-3xl text-gray-500 flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16  sm:items-start Sansa`}>

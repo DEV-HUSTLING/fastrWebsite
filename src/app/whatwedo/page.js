@@ -10,7 +10,7 @@ function Page() {
 
   }, []);
   return (
-    <div className='main-content-data w-1/2 h-9/10 flex-col p-6'>
+    <div className='main-content-data w-1/2 h-3/4 flex-col p-6'>
       <p data-aos='zoom-in' ata-aos="zoom-in"
         data-aos-duration="1500"
         data-aos-delay="100" className='w-full text-xl tracking-wider'>
