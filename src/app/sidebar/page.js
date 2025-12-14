@@ -66,7 +66,7 @@ function Page() {
                 </div>):null}
             
             
-            <main style={{ fontSize: 'larger' }} className={`${sansation.className} text-3xl text-gray-500 flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16  sm:items-start`}>
+            <main style={{ fontSize: 'larger' }} className={`${sansation.variable} font-[family-name:var(--font-sansation)] text-3xl text-gray-500 flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16  sm:items-start`}>
                 <div className="large-screen">
                     <Link href="/whatwedo" className={`${pathName === '/whatwedo' ? 'active-link' : 'nonactive-link'} cursor-none mb-16 flex items-center space-x-3 transform transition-transform duration-400 hover:text-white hover:scale-100`}>
                         <span className=' transform transition-transform duration-400 hover:text-white hover:scale-120'>

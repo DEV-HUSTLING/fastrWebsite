@@ -1,5 +1,5 @@
 'use client';
-import { Geist, Geist_Mono, Sansation } from "next/font/google";
+import { Geist, Geist_Mono,Sansation } from "next/font/google";
 import React,{useState, useEffect, useRef} from "react";
 import "./globals.css";
 import Sidebar from "./sidebar/page";
@@ -12,16 +12,14 @@ const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
-
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 const sansation = Sansation({
   weight: ['400', '700'],
   variable: "--font-sansation",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
   subsets: ["latin"],
 });
 const MIT = localFonts({
@@ -56,7 +54,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body
         // style={{ cursor: "none" }}
-        className={`flex ${geistSans.variable} ${geistMono.variable}  antialiased`}
+        className={`flex ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <BackgroundGrid />
 {/* 
@@ -65,13 +63,23 @@ export default function RootLayout({ children }) {
           className="cursor"
           style={{ left: `${mouseposition.x}px`, top: `${mouseposition.y}px` }}
         ></div> */}
-        <div className="fixed left-0 top-0 h-full">
-          <Sidebar />
-        </div>
-              
         {/* Main content should not be fixed or negative-z; keep it above the background canvas */}
-        <div className={`main-content fixed w-full min-h-screen flex items-center justify-center`}>
-          {children}
+<div
+  className="
+    main-content
+    fixed
+    w-full
+    h-screen
+    flex
+    items-center
+    justify-center
+    z-10
+  "
+>          {children}
+        </div>
+        
+        <div className="fixed left-0 top-0 h-full w-fit z-10">
+          <Sidebar />
         </div>
         {pathName != '/'?<div className="corner-title fixed bottom-10 right-4">
           {/* <Image
@@ -81,7 +89,7 @@ export default function RootLayout({ children }) {
           height={120}
           /> */}
             <span 
-            className={`${sansation.className} text-stone-100  opacity-75 bg-none font-bold text-4xl transform transition-transform duration-400 hover:opacity-100`}>
+            className={` ${sansation.className} text-stone-100  opacity-75 bg-none font-bold text-4xl transform transition-transform duration-400 hover:opacity-100`}>
             FASTR
           </span>
         </div>:null}
