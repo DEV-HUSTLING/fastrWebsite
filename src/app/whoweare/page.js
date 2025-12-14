@@ -4,8 +4,9 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 function Page() {
   useEffect(() => {
-    AOS.init();
-
+    AOS.init({
+      disable: window.innerWidth < 500
+    });
   }, []);
   return (
     <div className='main-content-data w-1/2 h-3/4 flex-col p-6'>

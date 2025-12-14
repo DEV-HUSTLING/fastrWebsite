@@ -131,7 +131,7 @@ body {
     height: 60px !important;
   }
   .corner-title{
-    top: 3rem !important;
+    top: 2rem !important;
     right: 1rem !important;
   }
     .corner-title span{
@@ -141,6 +141,13 @@ body {
     display:none;
   }
   .main-title{
+    height: 80% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
     font-size: 1rem !important;
     opacity: unset !important;
   }

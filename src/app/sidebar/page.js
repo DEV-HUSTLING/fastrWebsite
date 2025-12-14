@@ -19,11 +19,11 @@ function Page() {
         <>
             <button onClick={() => {
                 setMenu(!menu)
-            }} className='menu-icon absolute top-8 left-8 bg-white w-fit rounded-lg'>
+            }} className='menu-icon absolute top-8 left-8 w-fit rounded-lg'>
                 <Image
                     src={'/icons/menu.png'}
-                    width={50}
-                    height={50}
+                    width={30}
+                    height={30}
                     alt='icon'
                 />
             </button>
@@ -31,7 +31,7 @@ function Page() {
 
             {menu && (
                 <div className="fixed inset-0 bg-black/75 z-[99] medium-screen">
-                    <button onClick={() => setMenu(!menu)} className='menu-icon absolute top-6 left-6 bg-white w-fit rounded-lg'>
+                    <button onClick={() => setMenu(!menu)} className='menu-icon absolute top-6 left-6 w-fit rounded-lg'>
                         <Image
                             src={'/icons/menu.png'}
                             width={50}

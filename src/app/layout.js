@@ -61,7 +61,7 @@ export default function RootLayout({ children }) {
           style={{ left: `${mouseposition.x}px`, top: `${mouseposition.y}px` }}
         ></div> */}
         {/* Main content should not be fixed or negative-z; keep it above the background canvas */}
-        <div className={`main-content fixed w-full min-h-screen flex items-center justify-center z-11`}>
+        <div className={`main-content fixed w-full min-h-screen flex items-center justify-center z-10`}>
           {children}
         </div>
         
